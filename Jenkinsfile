@@ -7,11 +7,11 @@ pipeline {
                 git url: 'https://github.com/naveenkumar933/node-todo-cicd-master-jenkins.git', branch: 'master' 
             }
         }
-        // stage('Build and Test'){
-        //     steps{
-        //         sh 'docker build . -t trainwithshubham/node-todo-test:latest'
-        //     }
-        // }
+        stage('Build and Test'){
+            steps{
+                sh 'docker build . -t trainwithshubham/node-todo-test:latest'
+            }
+        }
         // stage('Push'){
         //     steps{
         //         withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
